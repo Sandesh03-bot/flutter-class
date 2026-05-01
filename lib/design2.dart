@@ -44,13 +44,13 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Container(
+            padding: const EdgeInsets.all(16.0),
+            alignment: Alignment.center,
             child: Image.asset(
               'assets/images/user.webp',
               width: 70,
               height: 70,
             ),
-            padding: const EdgeInsets.all(16.0),
-            alignment: Alignment.center,
           ),
           const SizedBox(width: 12),
 
