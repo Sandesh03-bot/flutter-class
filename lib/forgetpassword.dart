@@ -20,7 +20,7 @@ class _ForgetState extends State<Forget> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               width: 400,
               height: 650,
               child: Card(
