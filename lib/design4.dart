@@ -36,7 +36,7 @@ class _DashboardState extends State<Dashboard> {
                 ],
               ),
             ),
-        
+
             Padding(
               padding: EdgeInsetsGeometry.all(8.0),
               child: SizedBox(
@@ -53,25 +53,50 @@ class _DashboardState extends State<Dashboard> {
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("Wallet Balance", style: TextStyle(color: Colors.white,fontSize: 15, fontWeight: FontWeight.w100),),
-                            Text("\$1250.00",style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.w500),),
+                            Text(
+                              "Wallet Balance",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w100,
+                              ),
+                            ),
+                            Text(
+                              "\$1250.00",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 30,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text("View Details",style: TextStyle(color: Colors.white,fontSize: 15, fontWeight: FontWeight.w100),),
-                                Icon(Icons.chevron_right,color: Colors.white,)
+                                Text(
+                                  "View Details",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w100,
+                                  ),
+                                ),
+                                Icon(Icons.chevron_right, color: Colors.white),
                               ],
-                            )
+                            ),
                           ],
                         ),
-                        Icon(Icons.account_balance_wallet, color: const Color.fromARGB(255, 189, 207, 253),size: 50,)
+                        Icon(
+                          Icons.account_balance_wallet,
+                          color: const Color.fromARGB(255, 189, 207, 253),
+                          size: 50,
+                        ),
                       ],
                     ),
                   ),
                 ),
               ),
             ),
-          
+
             Padding(
               padding: EdgeInsetsGeometry.all(8.0),
               child: Align(
@@ -82,11 +107,18 @@ class _DashboardState extends State<Dashboard> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 40.0),
-                      child: const Text("Quick Actions",style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.w500,),),
+                      child: const Text(
+                        "Quick Actions",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
                     ),
                     SizedBox(height: 8),
                     Padding(
-                      padding: const EdgeInsets.only(left: 15.0 ,right: 15.0),
+                      padding: const EdgeInsets.only(left: 15.0, right: 15.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -122,31 +154,44 @@ class _DashboardState extends State<Dashboard> {
                               child: Icon(Icons.more_horiz),
                             ),
                           ),
-                          
                         ],
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
             ),
-        
+
             Padding(
               padding: EdgeInsetsGeometry.all(12.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Recent Transactions", style: TextStyle(fontWeight: FontWeight.w500,fontSize: 18,color: Colors.black),),
-                    Text("See All",style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w500,fontSize: 18,),),
-                  ],
-                ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Recent Transactions",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 18,
+                      color: Colors.black,
+                    ),
+                  ),
+                  Text(
+                    "See All",
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
               ),
-          
+            ),
+
             Padding(
               padding: const EdgeInsets.all(12),
               child: SizedBox(
                 height: 173,
-                width: 350, 
+                width: 350,
                 child: Card(
                   elevation: 10,
                   shape: RoundedRectangleBorder(
@@ -274,8 +319,23 @@ class _DashboardState extends State<Dashboard> {
                                   children: [
                                     CircleAvatar(
                                       radius: 15,
-                                      backgroundColor: const Color.fromARGB(255, 198, 255, 200),
-                                      child: Icon(Icons.wallet_travel_outlined, size: 20,color: const Color.fromARGB(255, 1, 166, 7),)),
+                                      backgroundColor: const Color.fromARGB(
+                                        255,
+                                        198,
+                                        255,
+                                        200,
+                                      ),
+                                      child: Icon(
+                                        Icons.wallet_travel_outlined,
+                                        size: 20,
+                                        color: const Color.fromARGB(
+                                          255,
+                                          1,
+                                          166,
+                                          7,
+                                        ),
+                                      ),
+                                    ),
                                     const SizedBox(width: 15),
                                     Column(
                                       crossAxisAlignment:
@@ -302,14 +362,11 @@ class _DashboardState extends State<Dashboard> {
                           ),
                         ),
                       ),
-
                     ],
                   ),
                 ),
               ),
             ),
-
-            
 
           ],
         ),

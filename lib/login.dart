@@ -2,9 +2,9 @@ import 'design1.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
-  final String username;
-  final String password;
-  const LoginPage({super.key, required this.username, required this.password});
+  final String user;
+  final String pass;
+  const LoginPage({super.key, required this.user, required this.pass});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -18,8 +18,8 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("username : ${widget.username}"),
-            Text("password : ${widget.password}"),
+            Text("username : ${widget.user}"),
+            Text("password : ${widget.pass}"),
             SizedBox(
               width: 400,
               height: 600,

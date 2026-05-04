@@ -1,14 +1,14 @@
 import 'login.dart';
 import 'package:flutter/material.dart';
 
-class register extends StatefulWidget {
-  const register({super.key});
+class Register extends StatefulWidget {
+  const Register({super.key});
 
   @override
-  State<register> createState() => _registerState();
+  State<Register> createState() => _RegisterState();
 }
 
-class _registerState extends State<register> {
+class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     final TextEditingController usernameController = TextEditingController();
@@ -32,13 +32,13 @@ class _registerState extends State<register> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => LoginPage(
-                    username: usernameController.text,
-                    password: passwordController.text,
+                    user: usernameController.text,
+                    pass: passwordController.text,
                   ),
                 ),
               );
             },
-            child: Text("login"),
+            child: Text("Register"),
           ),
         ],
       ),
