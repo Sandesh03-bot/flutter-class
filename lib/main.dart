@@ -1,5 +1,8 @@
 // import 'package:app/user_authentication_login.dart';
-import 'package:app/design5.dart';
+// import 'package:app/design5.dart';
+// import 'package:app/locallogin.dart';
+// import 'package:app/localstorage.dart';
+import 'package:app/user_authentication_signup.dart';
 // import 'package:app/user_authentication_signup.dart';
 import 'package:flutter/material.dart';
 // import 'register.dart';
@@ -20,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Profile(),
+      home: const UserAuthenticationSignup(),
     );
   }
 }
