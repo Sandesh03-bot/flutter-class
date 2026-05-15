@@ -13,7 +13,7 @@ class PortfolioLogin extends StatefulWidget {
 class _PortfolioLoginState extends State<PortfolioLogin> {
   @override
   Widget build(BuildContext context) {
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
     TextEditingController enterednamecontroller = TextEditingController();
     TextEditingController enteredpwcontroller = TextEditingController();
 
@@ -57,7 +57,7 @@ class _PortfolioLoginState extends State<PortfolioLogin> {
                     child: Padding(
                       padding: const EdgeInsets.only(top: 50.0),
                       child: Form(
-                        key: _formKey,
+                        key: formKey,
                         child: Column(
                           children: [
                             Padding(
@@ -169,7 +169,7 @@ class _PortfolioLoginState extends State<PortfolioLogin> {
                                   ),
                                 ),
                                 onPressed: () {
-                                  if (_formKey.currentState!.validate()) {
+                                  if (formKey.currentState!.validate()) {
                                     onLogin(context);
                                   }
                                 },

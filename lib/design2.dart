@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -64,11 +63,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 const TextField(
                   decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                  borderRadius:
-                    BorderRadius.zero, // Removes rounded corners
-                    borderSide: BorderSide(color: Colors.black),
-                  ),
+                    border: OutlineInputBorder(
+                      borderRadius:
+                          BorderRadius.zero, // Removes rounded corners
+                      borderSide: BorderSide(color: Colors.black),
+                    ),
                     labelText: "Enter your name",
                     hintText: 'e.g. John Doe',
                   ),
@@ -79,17 +78,17 @@ class _MyHomePageState extends State<MyHomePage> {
           SizedBox(height: 16),
 
           Padding(
-            padding: const EdgeInsets.only(left: 10.0,right: 10.0),
+            padding: const EdgeInsets.only(left: 10.0, right: 10.0),
             child: Column(
               children: [
                 Align(alignment: Alignment.topLeft, child: const Text("Email")),
                 const TextField(
                   decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius:
-                    BorderRadius.zero, // Removes rounded corners
-                    borderSide: BorderSide(color: Colors.black),
-                  ),
+                    border: OutlineInputBorder(
+                      borderRadius:
+                          BorderRadius.zero, // Removes rounded corners
+                      borderSide: BorderSide(color: Colors.black),
+                    ),
                     labelText: "Enter your email",
                     hintText: 'e.g. john.doe@example.com',
                   ),
@@ -111,9 +110,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     const Text("Notifications"),
                   ],
                 ),
-              Switch(
-                value: switchValue,
-                onChanged: (val) => setState(() => switchValue = val)
+                Switch(
+                  value: switchValue,
+                  onChanged: (val) => setState(() => switchValue = val),
                 ),
               ],
             ),
@@ -126,9 +125,12 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Row(
                   children: [
-                    Icon(Icons.star_half, size: 32, color: Colors.grey,),
+                    Icon(Icons.star_half, size: 32, color: Colors.grey),
                     const SizedBox(width: 8),
-                    const Text("Dark mode", style: TextStyle(color: Colors.grey),),
+                    const Text(
+                      "Dark mode",
+                      style: TextStyle(color: Colors.grey),
+                    ),
                   ],
                 ),
                 Switch(
@@ -153,11 +155,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 value: anotherChecked,
                 onChanged: (val) => setState(() => anotherChecked = val!),
                 side: const BorderSide(color: Colors.grey),
-                ),
-              const Text("Subscribe to newsletter", style: TextStyle(color: Colors.grey)),
+              ),
+              const Text(
+                "Subscribe to newsletter",
+                style: TextStyle(color: Colors.grey),
+              ),
             ],
           ),
-
 
           Container(
             width: double.infinity,
@@ -188,18 +192,21 @@ class _MyHomePageState extends State<MyHomePage> {
             decoration: BoxDecoration(
               border: Border.all(color: Colors.blue, width: 2),
               borderRadius: BorderRadius.circular(12),
-              color: Colors.blue
+              color: Colors.blue,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
                 Text(
                   "Save Changes",
-                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
