@@ -10,10 +10,20 @@ class NewDesign8 extends StatefulWidget {
 class _NewDesign8State extends State<NewDesign8> {
   @override
   Widget build(BuildContext context) {
+    bool darkMode = false;
+    bool notification = false;
+    bool accountSettings = false;
+    bool security = false;
     return Scaffold(
       appBar: AppBar(
         title: Row(
-          children: [Icon(Icons.arrow_back, size: 25), Text("Settings")],
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Icon(Icons.arrow_back, size: 25),
+            Spacer(),
+            Text("Settings"),
+            Spacer(),
+          ],
         ),
       ),
       body: SingleChildScrollView(
@@ -24,70 +34,18 @@ class _NewDesign8State extends State<NewDesign8> {
             children: [
               Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 12.0),
-                    child: Stack(
-                      children: [
-                        Center(
-                          child: Stack(
-                            alignment: Alignment.bottomRight,
-                            children: [
-                              CircleAvatar(
-                                radius: 70,
-                                backgroundColor: const Color.fromARGB(
-                                  255,
-                                  156,
-                                  217,
-                                  246,
-                                ),
-                                child: const Icon(
-                                  Icons.person,
-                                  size: 130,
-                                  color: Colors.blue,
-                                ),
-                              ),
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  shape: BoxShape.circle,
-                                  border: Border.all(
-                                    color: Colors.grey.shade300,
-                                    width: 1,
-                                  ),
-                                ),
-                                padding: const EdgeInsets.all(6),
-                                child: const Icon(
-                                  Icons.camera_alt,
-                                  size: 30,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 8.0),
+                  Align(
+                    alignment: AlignmentGeometry.centerLeft,
                     child: Text(
-                      "Sandesh Ghimire",
+                      "Preferences",
                       style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 30,
-                        fontWeight: FontWeight.w700,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                   ),
-
-                  Text(
-                    "ghimiresandesh056@gmail.com",
-                    style: TextStyle(color: Colors.grey, fontSize: 15),
-                  ),
-
                   Padding(
-                    padding: const EdgeInsets.only(top: 20.0, bottom: 12.0),
+                    padding: const EdgeInsets.only(top: 12.0, bottom: 12.0),
                     child: SizedBox(
                       width: 500,
                       child: Card(
@@ -111,18 +69,57 @@ class _NewDesign8State extends State<NewDesign8> {
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: Text(
-                                            "Personal Information",
+                                            "Dark Mode",
                                             style: TextStyle(fontSize: 20),
                                           ),
                                         ),
                                       ],
                                     ),
-                                    Icon(Icons.chevron_right, size: 25),
+                                    Switch(
+                                      value: darkMode,
+                                      onChanged: (val) =>
+                                          setState(() => darkMode = val),
+                                    ),
                                   ],
                                 ),
                               ),
                             ),
 
+                            TextButton(
+                              onPressed: () {},
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Icon(
+                                            Icons.notifications,
+                                            size: 30,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text(
+                                            "Notifications",
+                                            style: TextStyle(fontSize: 20),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Switch(
+                                      value: darkMode,
+                                      onChanged: (val) =>
+                                          setState(() => darkMode = val),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
                             TextButton(
                               onPressed: () {},
                               child: Padding(
@@ -146,7 +143,11 @@ class _NewDesign8State extends State<NewDesign8> {
                                         ),
                                       ],
                                     ),
-                                    Icon(Icons.chevron_right, size: 25),
+                                    Switch(
+                                      value: accountSettings,
+                                      onChanged: (val) =>
+                                          setState(() => accountSettings = val),
+                                    ),
                                   ],
                                 ),
                               ),
@@ -174,94 +175,11 @@ class _NewDesign8State extends State<NewDesign8> {
                                         ),
                                       ],
                                     ),
-                                    Icon(Icons.chevron_right, size: 25),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            TextButton(
-                              onPressed: () {},
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Icon(
-                                            Icons.notifications,
-                                            size: 30,
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Text(
-                                            "Notifications",
-                                            style: TextStyle(fontSize: 20),
-                                          ),
-                                        ),
-                                      ],
+                                    Switch(
+                                      value: security,
+                                      onChanged: (val) =>
+                                          setState(() => accountSettings = val),
                                     ),
-                                    Icon(Icons.chevron_right, size: 25),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            TextButton(
-                              onPressed: () {},
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Icon(Icons.help, size: 30),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Text(
-                                            "Help & Support",
-                                            style: TextStyle(fontSize: 20),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Icon(Icons.chevron_right, size: 25),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            TextButton(
-                              onPressed: () {},
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Icon(Icons.logout, size: 30),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Text(
-                                            "Logout",
-                                            style: TextStyle(fontSize: 20),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Icon(Icons.chevron_right, size: 25),
                                   ],
                                 ),
                               ),

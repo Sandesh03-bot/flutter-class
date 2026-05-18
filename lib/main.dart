@@ -1,6 +1,7 @@
 // import 'package:app/design6.dart';
 import 'package:app/design8.dart';
-import 'package:app/real_app_athentication.dart';
+import 'package:app/truecaller.dart';
+// import 'package:app/real_app_athentication.dart';
 import 'package:flutter/material.dart';
 // import 'register.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const NewDesign8(),
+      home: const Truecaller(),
     );
   }
 }
